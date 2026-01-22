@@ -5,7 +5,7 @@
  *
  * @returns {HTMLElement}
  */
-export function createComponent(componentElem) {
+export default function (componentElem) {
   const templateElem = componentElem.querySelector('.app-tmp-number-component');
 
   if (templateElem === null) {

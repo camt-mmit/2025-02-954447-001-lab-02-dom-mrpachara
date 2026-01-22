@@ -13,12 +13,18 @@
     sans-serif;
 
   --app-monospace-font: ui-monospace, monospace;
+  --app-background-color: white;
 }
 
 :root,
 body {
   padding: 0px;
   margin: 0px;
+}
+
+body {
+  background-color: var(--app-background-color);
+  overflow-y: scroll;
 }
 
 .app-cl-primary {
@@ -120,13 +126,62 @@ input[type='number'],
   margin-left: auto;
   margin-right: auto;
 
+  padding-bottom: 1em;
+
   & > header {
-    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    background-color: var(--app-background-color);
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid black;
+
+    position: sticky;
+    top: 0px;
+
+    & > * {
+      margin: 0px;
+    }
+
+    & > h2 {
+      margin-left: auto;
+      margin-right: auto;
+
+      & > .app-section-number {
+        display: inline-block;
+
+        margin-left: 1ch;
+        width: 3ch;
+      }
+    }
+  }
+
+  .app-cl-column-container {
+    margin-bottom: 1em;
   }
 
   .app-cmp-number-list {
+    margin-top: 1em;
+
     display: flex;
     flex-direction: column;
     row-gap: 4px;
   }
+}
+
+.app-cmp-float {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+  overflow: visible;
+}
+
+.app-cmp-section-list {
+  margin-top: 1em;
 }
